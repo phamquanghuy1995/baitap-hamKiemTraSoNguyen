@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        if (number == 2) {
+            return true;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let ketqua = 'Các số nguyên tố nhỏ hơn 10000 là : ';
+    for (let i = 0; i < 100000; i++) {
+        if (isPrime(i)) {
+            ketqua += i + ', ';
+        }
+    }
+    document.write(ketqua);
+</script>
+</body>
+</html>
